@@ -1,0 +1,11 @@
+<h1> Strona główna </h1>
+
+<!-- {{ user.is_authenticated }} -->
+
+{% if user.is_authenticated %}
+   <p>Cześć {{ user }}</p>
+{% else %}
+     <p>Nie jestes zalogowany</p>
+
+{% endif %}
+<button><a href="{% url 'polls:question_list'%}">Pytania</a></button>

@@ -1,0 +1,17 @@
+<h1>{{ question.question_text }}</h1>
+<h1>{{ question.pub_date }}</h1>
+
+<ul>
+{% for choice in question.choice_set.all %}
+    <ul>
+       <li>{{ choice.choice_text }} ({{ choice.votes }}) </li>
+    </ul>
+{% endfor %}
+</ul>
+<ul>
+{% for answer in question.answer_set.all %}
+    <ul>
+       <li>{{ answer.answer_text }} </li>
+    </ul>
+{% endfor %}
+</ul>open
